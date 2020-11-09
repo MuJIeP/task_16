@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .counter.active {
+        color:brown;
+    }
+
+    .slider {
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .slider-item {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .arrow {
+        position: absolute;
+        z-index: 1;
+        color: white;
+        font-size: 4rem;
+        top: calc(50% - 2rem);
+        font-weight: 900;
+        cursor: pointer;
+    }
+
+    .arrow-right {
+        right: 15px;
+    }
+
+    .arrow-left {
+        left: 15px;
+    }
+
+    .slider-track {
+        display: flex;
+    }
+
+    .pagination {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        display: flex;
+        list-style-type: none;
+    }
+
+    .dot {
+        margin: 0 15px;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background: red;
+    }
+</style>
+
+<body>
+    <ul class="hamburgers-list"> Выберете гамбургер:
+        <li class="hamburgers-list-item" data-base="small">маленький (50 тугриков, 20 калорий)</li>
+        <li class="hamburgers-list-item">большой (100 тугриков, 40 калорий)</li>
+    </ul>
+    <ul class="additions-list"> Добавки:
+        <li class="additions-list-item">сыр (+ 10 тугриков, + 20 калорий)</li>
+        <li class="additions-list-item">салат (+ 20 тугриков, + 5 калорий)</li>
+        <li class="additions-list-item">картофель (+ 15 тугриков, + 10 калорий)</li>
+        <li class="additions-list-item">посыпать приправой (+ 15 тугриков, 0 калорий)</li>
+        <li class="additions-list-item">полить майонезом (+ 20 тугриков, + 5 калорий)</li>
+    </ul>
+    <div>К оплате:</div>
+    <div>Калорийность:</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
